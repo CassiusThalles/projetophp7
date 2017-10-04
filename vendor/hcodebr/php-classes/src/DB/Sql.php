@@ -1,12 +1,12 @@
 <?php 
 
-namespace DB;
+namespace Hcode\DB;
 
 class Sql {
 
-	const HOSTNAME = "127.0.0.1";
-	const USERNAME = "root";
-	const PASSWORD = "";
+	const HOSTNAME = "localhost";
+	const USERNAME = "Admin";
+	const PASSWORD = "admin";
 	const DBNAME = "db_ecommerce";
 
 	private $conn;
@@ -51,7 +51,7 @@ class Sql {
 
 	}
 
-	public function select($rawQuery, $params = array()):array
+	public function select($rawQuery, $params = array())
 	{
 
 		$stmt = $this->conn->prepare($rawQuery);
